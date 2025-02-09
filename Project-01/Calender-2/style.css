@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #050506;
+}
+
+.calender {
+  position: relative;
+  width: 340px;
+  
+}
+
+.calender::before, .calender::after {
+  position: absolute;
+  content: "";
+  width: 120px;
+  height: 120px;
+  z-index: -1;
+  background-color: #ff5733;
+  border-radius: 50%;
+}
+
+.calender::before {
+  top: -20%;
+  left: -10%;
+}
+
+.calender::after {
+  background-color: #ffc300;
+  bottom: -20%;
+  right: -10%;
+}
+
+.calender-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 5px 25px rgba(1, 1, 1, 0.25);
+}
+
+.month-name {
+  width: 100%;
+  background: #4285f4;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.day-name {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.date-number {
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.year {
+  font-size: 18px;
+  margin-bottom: 20px;
+}

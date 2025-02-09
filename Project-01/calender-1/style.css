@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+}
+body {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color:white;
+}
+.calender {
+	border-radius: 20px;
+	background-color: #f43838;
+	box-shadow: 0 0 10px 10px #a15959;
+	padding: 20px;
+	margin-right: 100px;
+}
+.calender-year {
+	font-size: 2rem;
+	margin-bottom: 30px;
+	margin-left: 20px;
+}
+.calender-content {
+	display: grid;
+	grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+	place-items: center;
+	row-gap: 1rem;
+	padding: 20px;
+	text-align: center;
+	width: 100%;
+	font-size: 1.2rem;
+}
+.calender-day {
+	text-align: center;
+	border-radius: 50rem;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #aaa;
+	cursor: pointer;
+	transition: background-color 0.5s;
+}
+.calender-day.disabled {
+	color: #dfdfdf;
+	cursor: not-allowed;
+}
+.calender-day.current {
+	background-color: #f3f9fe;
+	color: #70b0e8;
+}
+.calender-day.active {
+	background-color: #1d90f4;
+	color: #fff;
+}
+.date {
+	max-width: 45%;
+}
+
+.date h1 {
+	font-size: 10rem;
+	color: #e52709eb;
+}
+.date h3 { color:whitesmoke;
+	position: relative;
+	z-index: 2;
+	font-size: 3rem;
+	margin-top: -65px;
+	text-shadow: -2px -2px 8px #f5f6f8aa;
+}
+.date h2 {
+	font-size: 4rem;
+	line-height: 4rem;
+    color: #f3f9fe;
+}
+.date h2:nth-of-type(1) {
+	margin-top: 50px;
+}
+.date p {
+	margin: 20px 0;
+	font-weight: 300;
+	font-size: 1.2rem;
+}
+.date button {
+	padding: 15px 25px;
+	border-radius: 50rem;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	margin-right: 20px;
+}
+.date button:nth-of-type(1) {
+	background-color: #9ba6b6;
+}
+.date button:nth-of-type(2) {
+	background-color: #1d90f4;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #050801;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+a{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+   
+}
+a:hover{
+    background: #e6efef;
+    color: #050801;
+    box-shadow: 0 0 5px hsl(180, 22%, 95%),
+                0 0 25px hsl(180, 22%, 95%),
+                0 0 50px hsl(180, 22%, 95%),
+                0 0 200px hsl(180, 22%, 95%);
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+a:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+a:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+a span{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}

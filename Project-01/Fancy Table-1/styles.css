@@ -1,0 +1,123 @@
+.info-table {
+    border-spacing: 0;
+    border-collapse: separate;
+    width: 100%;
+    color: #4e0ce7;
+    font-size: 0.857em;
+    line-height: 1em;
+    margin-bottom: 17px;
+    font-family: "museo-sans",sans-serif;
+}
+.info-table a {
+    color: #0880f8;
+    text-decoration: none;
+}
+.info-table a:hover {
+    color: #eb10c6;
+    text-decoration: none;
+    background-color: inherit;
+}
+.info-table th, .info-table td {
+    border: 1px solid #BCBABA;
+    border-top-color: #FFF;
+    border-right: none;
+    padding: 8px 20px 8px 23px;
+    text-align: left;
+    vertical-align: middle;
+    background: #EEE;
+    margin: 0;
+}
+
+.info-table th {
+    position: relative;
+  
+    background: #58a7e6;
+    text-align: left;
+    font-size: 1.083em;
+    line-height: 1.538em;
+    padding: 6px 20px 5px 23px;
+    color: #ddedfa;
+    text-shadow: 0px -1px 1px rgba(0, 81, 168, 0.38);
+    border-color: #2c90df;
+    font-weight: 900;
+}
+
+.info-table th:last-child {
+    border-right: 1px solid #BCBABA;
+    text-align: center;
+}
+
+.info-table td.last, .info-table td:last-child {
+    border-right: 1px solid #C2CAD0;
+}
+
+.info-table .even td, .info-table tr:nth-child(even) td {
+    background: #E7E7E7;
+}
+
+/* Overlay Table Header */
+.info-table th:nth-child(2),
+.info-table th:nth-child(4),
+.info-table th:nth-child(6){
+  &::before {
+    content: '';
+    display: inline-block;
+    
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    top: -20px;
+    height: 20px;
+    background-color: #58a7e6;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: solid 1px darken(#58a7e6, 20%);
+    border-bottom: none;
+  }
+}
+
+/* Highlight Styles */
+.info-table th:nth-child(2) {
+  color: #000;
+  background-color: #f6cdb1;
+  &::before { 
+    background-color: #f6cdb1;
+    border: solid 1px darken(#f6cdb1, 20%);
+    border-bottom: none;
+  }
+}
+
+/* Overlay Table Footer */
+.info-table tfoot td {
+  position: relative;
+}
+
+.info-table tfoot td:nth-child(2),
+.info-table tfoot td:nth-child(4),
+.info-table tfoot td:nth-child(6){
+  &::before {
+    content: '';
+    display: inline-block;
+    
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    bottom: -20px;
+    height: 20px;
+    background-color: #58a7e6;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: solid 1px darken(#58a7e6, 20%);
+    border-top: none;
+  }
+}
+
+
+/* Highlight Styles */
+.info-table tfoot td:nth-child(2) {
+  &::before { 
+    background-color: #f6cdb1;
+    border: solid 1px darken(#f6cdb1, 20%);
+    border-top: none;
+  }
+}

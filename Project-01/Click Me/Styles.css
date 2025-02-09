@@ -1,0 +1,44 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #6B3A9C;
+	background: radial-gradient(at center, #6B3A9C, #B962BE);
+	.content {
+		height: 10rem;
+		.jump {
+			position: relative;
+		}	
+		.moveAndRotate {
+				animation: moveAndRotate .5s 1;
+		}
+		.shadow {
+			width: 240px;
+			height: 20px;
+			background-color: rgba(0, 0, 0, 0.3); 
+			border-radius: 50%;
+			position: absolute; 
+			bottom: 40px;
+			left: 50%; 
+			transform: translateX(-50%); 
+			filter: blur(5px); 
+		}
+	}
+	
+}
+ .btn{padding:15px; background-color:yellow ;}
+@keyframes moveAndRotate {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1.0);
+  }
+  50% {
+    transform: translateY(-30px) rotate(0deg) scale(1.0);
+  }
+	75% {
+		transform: translateY(-30px) rotate(720deg) scale(2.0);
+	}
+  100% {
+    transform: translateY(0) rotate(720deg) scale(1.0); 
+  }
+}
